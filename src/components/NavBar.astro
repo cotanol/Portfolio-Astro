@@ -1,0 +1,28 @@
+---
+const navItems = [
+  { name: 'Home', href: '#home' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'Skills', href: '#skills' },
+  { name: 'Contact', href: '#contact' },
+]
+---
+
+<nav class="fixed w-full bg-[var(--dark)]/80 backdrop-blur-sm z-50 py-4">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold text-[var(--primary)]">Portfolio</a>
+      <ul class="flex space-x-8">
+        {navItems.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class="text-gray-300 hover:text-[var(--primary)] transition-colors"
+            >
+              {item.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</nav>
