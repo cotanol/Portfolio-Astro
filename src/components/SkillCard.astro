@@ -1,0 +1,30 @@
+---
+import type { Skill } from "../types/skill.ts";
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  skill: Skill;
+}
+
+const skill = Astro.props.skill;
+---
+
+<div class="bg-gray-800 p-4 rounded-lg flex flex-col gap-4">
+  <div class="flex justify-between">
+    <span class="font-medium capitalize">{skill.name}</span>
+    <span class="text-[var(--primary)]">{skill.level}%</span>
+  </div>
+  <Icon
+    class={`hover:animate-${skill.animation}`}
+    name={`${skill.name}`}
+    width={50}
+    height={50}
+  />
+  <div class="w-full bg-gray-700 rounded-full h-2.5">
+    <div
+      class="bg-[var(--primary)] h-2.5 rounded-full"
+      style={`width: ${skill.level}%`}
+    >
+    </div>
+  </div>
+</div>
