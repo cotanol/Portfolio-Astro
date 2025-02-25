@@ -20,6 +20,9 @@ import { Icon } from "astro-icon/components";
     <div class="container mx-auto px-4">
       <div class="grid md:grid-cols-2 gap-8 items-center">
         <div class="text-left">
+          <p class="text-[var(--primary)] text-lg sm:text-xl font-medium mb-4">
+            Hi, I'm Francisco 👋
+          </p>
           <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
             Frontend
             <span
@@ -54,8 +57,8 @@ import { Icon } from "astro-icon/components";
               ><Icon
                 class="text-gray-400 hover:text-[var(--primary)] transition-colors hover:animate-bounce"
                 name="linkedin"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
               /></a
             >
             <a
@@ -65,8 +68,8 @@ import { Icon } from "astro-icon/components";
               ><Icon
                 class="text-gray-400 hover:text-[var(--primary)] transition-colors hover:animate-spin"
                 name="github"
-                width={50}
-                height={50}
+                width={40}
+                height={40}
               /></a
             >
           </div>
@@ -76,8 +79,8 @@ import { Icon } from "astro-icon/components";
             class="relative w-48 sm:w-64 md:w-full aspect-square mx-auto rounded-full overflow-hidden border-4 border-[var(--primary)]/20"
           >
             <img
-              src="https://images.unsplash.com/photo-1698170925942-c54411018ada?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Your Name"
+              src="./gato-perfil.avif"
+              alt="Francisco Salcedo"
               class="w-full h-full object-cover"
             />
           </div>
@@ -130,14 +133,14 @@ import { Icon } from "astro-icon/components";
         >
       </h2>
       <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
+        class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-5xl mx-auto"
       >
         {skills.map((skill) => <SkillCard skill={skill} />)}
       </div>
     </div>
   </section>
 
-  <!-- Contact Section TODO: Factorizar con React y libreria de formularios -->
+  <!-- Contact Section -->
   <section id="contact" class="py-20 bg-gray-900/50">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-12">

@@ -1,5 +1,5 @@
 export interface Skill {
   name: string;
-  level: number;
+  color: string;
   animation: string;
 }
