@@ -1,6 +1,7 @@
 import { createContact } from "../../services/contact-service";
 import { useState } from "react";
 import type { Contact } from "../../types/contact";
+import { Toaster, toast } from "sonner";
 
 const FormContact = () => {
   const [contact, setContact] = useState<Contact>({
@@ -28,8 +29,12 @@ const FormContact = () => {
       return;
     }
 
-    await createContact(contact);
-    console.log("Contact created successfully");
+    toast.promise(createContact(contact), {
+      error: "An error occurred",
+      loading: "Loading...",
+      success: "Contact created successfully",
+    });
+
     setContact({ id: "", name: "", email: "", message: "" });
   };
 
@@ -92,6 +97,16 @@ const FormContact = () => {
       >
         Send Message
       </button>
+      <Toaster
+        toastOptions={{
+          style: {
+            background: "#1e293b", // Fondo azul oscuro
+            color: "#f8fafc", // Texto blanco suave
+            border: "1px solid #334155", // Borde sutil
+            borderRadius: "8px",
+          },
+        }}
+      />
     </form>
   );
 };

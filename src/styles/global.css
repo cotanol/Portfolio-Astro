@@ -6,3 +6,19 @@
   --primary: #0ea5e9;
   --secondary: #6366f1;
 }
+
+input:-webkit-autofill {
+  background-color: #1e293b !important; /* Mismo fondo */
+  color: #ffffff !important; /* Texto blanco */
+  border: 1px solid #334155 !important; /* Borde gris oscuro */
+  box-shadow: 0 0 0px 1000px #1e293b inset !important;
+  -webkit-text-fill-color: #ffffff !important; /* Evita que Chrome lo vuelva negro */
+  transition: background-color 5000s ease-in-out 0s; /* Truco para evitar el cambio */
+  caret-color: white;
+}
+
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #ffffff !important; /* Mantiene el texto blanco en focus */
+  border: 1px solid var(--primary) !important; /* Forzar el borde azul en focus */
+  outline: none !important;
+}
