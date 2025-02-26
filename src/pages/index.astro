@@ -9,7 +9,7 @@ import { skills } from "../data/skill-data";
 import { Icon } from "astro-icon/components";
 ---
 
-<Layout title="Frontend Developer Portfolio">
+<Layout title="Francisco Salcedo Morales | Web Developer">
   <Navbar client:load />
 
   <!-- Hero Section -->
@@ -78,11 +78,15 @@ import { Icon } from "astro-icon/components";
           <div
             class="relative w-48 sm:w-64 md:w-full aspect-square mx-auto rounded-full overflow-hidden border-4 border-[var(--primary)]/20"
           >
-            <img
-              src="./gato-perfil.avif"
-              alt="Francisco Salcedo"
-              class="w-full h-full object-cover"
-            />
+            <picture>
+              <source srcset="./gato-perfil-avif.avif" type="image/avif" />
+              <source srcset="./gato-perfil-webp.webp" type="image/webp" />
+              <img
+                src="./gato-perfil-webp.webp"
+                alt="Francisco Salcedo"
+                class="w-full h-full object-cover"
+              />
+            </picture>
           </div>
         </div>
       </div>
@@ -97,16 +101,18 @@ import { Icon } from "astro-icon/components";
       </h2>
       <div class="max-w-3xl mx-auto text-center">
         <p class="text-lg text-gray-400 mb-6">
-          I'm a passionate Frontend Developer with expertise in building modern
-          web applications. With a strong foundation in React, TypeScript, and
-          modern web technologies, I create responsive and user-friendly
-          interfaces that deliver exceptional user experiences.
+          I'm a passionate Frontend Developer with a strong focus on building
+          high-performance, modern web applications. With expertise in React,
+          TypeScript, and the latest web technologies, I craft responsive,
+          accessible, and user-friendly interfaces that deliver seamless
+          experiences.
         </p>
         <p class="text-lg text-gray-400">
-          My approach combines clean code practices with creative
-          problem-solving to build scalable and maintainable applications. I'm
-          constantly learning and exploring new technologies to stay at the
-          forefront of web development.
+          I thrive on optimizing performance, refining user interactions, and
+          writing clean, maintainable code. My approach blends creativity with
+          problem-solving to build scalable solutions. Always eager to learn and
+          experiment with emerging technologies, I stay ahead in the
+          ever-evolving web development landscape.
         </p>
       </div>
     </div>

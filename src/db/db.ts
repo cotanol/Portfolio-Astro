@@ -7,12 +7,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAWI-6zTpdjrfKF-q_5jq7uGJM_lXivcYE",
-  authDomain: "portfolio-contacto-6e986.firebaseapp.com",
-  projectId: "portfolio-contacto-6e986",
-  storageBucket: "portfolio-contacto-6e986.firebasestorage.app",
-  messagingSenderId: "326588664565",
-  appId: "1:326588664565:web:3af09b433b1fe677c4d3bc",
+  apiKey: import.meta.env.PUBLIC_FIREBASE_API_KEY,
+  authDomain: import.meta.env.PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.PUBLIC_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase

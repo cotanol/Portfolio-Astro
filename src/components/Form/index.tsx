@@ -2,6 +2,8 @@ import { createContact } from "../../services/contact-service";
 import { useState } from "react";
 import type { Contact } from "../../types/contact";
 import { Toaster, toast } from "sonner";
+import validateContact from "../../utils/validate-contact";
+import { Timestamp } from "firebase/firestore";
 
 const FormContact = () => {
   const [contact, setContact] = useState<Contact>({
@@ -9,7 +11,10 @@ const FormContact = () => {
     name: "",
     email: "",
     message: "",
+    date: null,
   });
+
+  const [errors, setErrors] = useState<Partial<Contact>>({});
 
   const handleChangeInput = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -20,26 +25,26 @@ const FormContact = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (
-      !contact.name.trim() ||
-      !contact.email.trim() ||
-      !contact.message.trim()
-    ) {
-      console.log("Please fill in all fields");
+    const response = await validateContact(contact);
+
+    if (response.status === "error") {
+      setErrors(response.errors || {});
       return;
     }
 
-    toast.promise(createContact(contact), {
+    setErrors({});
+
+    toast.promise(createContact({ ...contact, date: Timestamp.now() }), {
       error: "An error occurred",
       loading: "Loading...",
       success: "Contact created successfully",
     });
 
-    setContact({ id: "", name: "", email: "", message: "" });
+    setContact({ id: "", name: "", email: "", message: "", date: null });
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6" noValidate>
       <div>
         <label
           htmlFor="name"
@@ -54,8 +59,11 @@ const FormContact = () => {
           value={contact.name}
           className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-[var(--primary)]"
           onChange={handleChangeInput}
-          required
+          placeholder="Your name"
         />
+        {errors.name && (
+          <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+        )}
       </div>
       <div>
         <label
@@ -71,8 +79,11 @@ const FormContact = () => {
           value={contact.email}
           className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-[var(--primary)]"
           onChange={handleChangeInput}
-          required
+          placeholder="Example@mail.com"
         />
+        {errors.email && (
+          <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+        )}
       </div>
       <div>
         <label
@@ -88,8 +99,11 @@ const FormContact = () => {
           value={contact.message}
           className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-[var(--primary)]"
           onChange={handleChangeInput}
-          required
+          placeholder="Your message"
         ></textarea>
+        {errors.message && (
+          <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+        )}
       </div>
       <button
         type="submit"
