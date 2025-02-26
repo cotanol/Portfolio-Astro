@@ -9,7 +9,5 @@ export const createContact = async (contact: Contact) => {
     await addDoc(collectionName, contactWithoutId);
   } catch (error) {
     console.error("Error adding document: ", error);
-  } finally {
-    console.log("Process completed");
   }
 };

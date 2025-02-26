@@ -37,7 +37,7 @@ const FormContact = () => {
     toast.promise(createContact({ ...contact, date: Timestamp.now() }), {
       error: "An error occurred",
       loading: "Loading...",
-      success: "Contact created successfully",
+      success: "Message sent successfully",
     });
 
     setContact({ id: "", name: "", email: "", message: "", date: null });
