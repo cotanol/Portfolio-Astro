@@ -25,6 +25,6 @@ export const projects = [
     description: "A modern e-commerce platform built with Next and Supabase",
     image: "./projects/shop-ecommerce.webp",
     technologies: ["Next", "TypeScript", "Supabase", "Tailwind CSS"],
-    link: "https://proyecto-libreria-react-firebase.vercel.app/",
+    link: "https://shop-supabase-next.vercel.app/",
   },
 ];
