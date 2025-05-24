@@ -4,7 +4,7 @@ export const skills = [
   { name: "firebase", color: "text-[#FF5D01]", animation: "bounce" },
   { name: "mysql", color: "text-white", animation: "bounce" },
   { name: "next", color: "text-white", animation: "spin" },
-  { name: "github", color: "text-white", animation: "spin" },
+  { name: "git", color: "text-[#FF6B35]", animation: "spin" },
   { name: "supabase", color: "text-[#3ecf8e]", animation: "spin" },
   { name: "astro", color: "text-[#FF5D01]", animation: "bounce" },
 
