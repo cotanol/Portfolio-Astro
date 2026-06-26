@@ -21,10 +21,10 @@ import { Icon } from "astro-icon/components";
       <div class="grid md:grid-cols-2 gap-8 items-center">
         <div class="text-left">
           <p class="text-[var(--primary)] text-lg sm:text-xl font-medium mb-4">
-            Hi, I'm Francisco 👋
+            Hola, soy Francisco 👋
           </p>
           <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold mb-6">
-            Frontend
+            FullStack
             <span
               class="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)]"
             >
@@ -32,21 +32,23 @@ import { Icon } from "astro-icon/components";
             </span>
           </h1>
           <p class="text-lg sm:text-xl text-gray-400 mb-8">
-            Creating beautiful and functional web experiences with modern
-            technologies
+            Especializado en construir aplicaciones web robustas con un enfoque
+            hacia la <span class="text-white font-semibold"
+              >Inteligencia Artificial</span
+            > e integración de arquitecturas inteligentes.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 mb-8">
             <a
               href="#projects"
               class="bg-[var(--primary)] hover:bg-[var(--primary)]/90 text-white px-8 py-3 rounded-lg transition-colors"
             >
-              View Projects
+              Ver Proyectos
             </a>
             <a
               href="#contact"
               class="border border-[var(--primary)] text-[var(--primary)] hover:bg-[var(--primary)]/10 px-8 py-3 rounded-lg transition-colors"
             >
-              Contact Me
+              Contáctame
             </a>
           </div>
           <div class="flex gap-4 mt-8">
@@ -97,20 +99,25 @@ import { Icon } from "astro-icon/components";
   <section id="about" class="py-20 bg-gray-900/50">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">
-        About <span class="text-[var(--primary)]">Me</span>
+        Sobre <span class="text-[var(--primary)]">Mí</span>
       </h2>
       <div class="max-w-3xl mx-auto text-center">
-        <p class="text-lg text-gray-400 mb-6">
-          I'm a passionate Frontend Developer and university student exploring
-          the world of web development. With experience in React, TypeScript,
-          and modern web technologies, I enjoy building responsive, accessible,
-          and user-friendly applications.
+        <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+          Soy estudiante de Ingeniería de Sistemas apasionado por el desarrollo
+          de software y la inteligencia artificial. Mi enfoque principal está en
+          el ecosistema <span class="text-white font-medium">Full Stack</span>,
+          específicamente typescript y diseñando aplicaciones escalables que
+          integran modelos de lenguaje (LLMs) y arquitecturas avanzadas como <span
+            class="text-[var(--primary)] font-medium">RAG</span
+          > en python.
         </p>
-        <p class="text-lg text-gray-400">
-          I focus on writing clean, maintainable code while continuously
-          improving performance and user interactions. Always eager to learn and
-          explore new technologies, I aim to refine my skills and contribute to
-          impactful projects in the ever-evolving web development landscape.
+        <p class="text-lg text-gray-300 leading-relaxed">
+          Me enfoco en escribir código limpio y mantenible, optimizar el
+          rendimiento en backend y diseñar bases de datos eficientes.
+          Actualmente, estoy expandiendo mis conocimientos en infraestructura
+          cloud para desplegar e integrar agentes de IA autónomos, manteniéndome
+          en constante aprendizaje para especializarme y dominar el desarrollo
+          de soluciones impulsadas por inteligencia artificial.
         </p>
       </div>
     </div>
@@ -120,7 +127,7 @@ import { Icon } from "astro-icon/components";
   <section id="projects" class="py-20 bg-gray-900/50">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-12">
-        Featured <span class="text-[var(--primary)]">Projects</span>
+        Proyectos <span class="text-[var(--primary)]">Destacados</span>
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
         {projects.map((project) => <ProjectCard project={project} />)}
@@ -132,8 +139,8 @@ import { Icon } from "astro-icon/components";
   <section id="skills" class="py-20">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-12">
-        Technical <span class="text-[var(--primary)] hover:animate-pulse"
-          >Skills</span
+        Habilidades <span class="text-[var(--primary)] hover:animate-pulse"
+          >Técnicas</span
         >
       </h2>
       <div
@@ -148,7 +155,7 @@ import { Icon } from "astro-icon/components";
   <section id="contact" class="py-20 bg-gray-900/50">
     <div class="container mx-auto px-4">
       <h2 class="text-4xl font-bold text-center mb-12">
-        Get In <span class="text-[var(--primary)]">Touch</span>
+        Hola <span class="text-[var(--primary)]">Contáctame</span>
       </h2>
       <div class="max-w-xl mx-auto">
         <FormContact client:load />

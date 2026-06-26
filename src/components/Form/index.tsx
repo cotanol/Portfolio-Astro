@@ -50,7 +50,7 @@ const FormContact = () => {
           htmlFor="name"
           className="block text-sm font-medium text-gray-400 mb-2"
         >
-          Name
+          Nombre
         </label>
         <input
           type="text"
@@ -59,7 +59,7 @@ const FormContact = () => {
           value={contact.name}
           className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-[var(--primary)]"
           onChange={handleChangeInput}
-          placeholder="Your name"
+          placeholder="Ingresa tu nombre"
         />
         {errors.name && (
           <p className="text-red-500 text-sm mt-1">{errors.name}</p>
@@ -70,7 +70,7 @@ const FormContact = () => {
           htmlFor="email"
           className="block text-sm font-medium text-gray-400 mb-2"
         >
-          Email
+          Correo electrónico
         </label>
         <input
           type="email"
@@ -79,7 +79,7 @@ const FormContact = () => {
           value={contact.email}
           className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-[var(--primary)]"
           onChange={handleChangeInput}
-          placeholder="Example@mail.com"
+          placeholder="ejemplo@mail.com"
         />
         {errors.email && (
           <p className="text-red-500 text-sm mt-1">{errors.email}</p>
@@ -90,7 +90,7 @@ const FormContact = () => {
           htmlFor="message"
           className="block text-sm font-medium text-gray-400 mb-2"
         >
-          Message
+          Mensaje
         </label>
         <textarea
           id="message"
@@ -99,7 +99,7 @@ const FormContact = () => {
           value={contact.message}
           className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-[var(--primary)]"
           onChange={handleChangeInput}
-          placeholder="Your message"
+          placeholder="Ingresa tu mensaje"
         ></textarea>
         {errors.message && (
           <p className="text-red-500 text-sm mt-1">{errors.message}</p>
@@ -109,7 +109,7 @@ const FormContact = () => {
         type="submit"
         className="w-full bg-[var(--primary)] hover:bg-[var(--primary)]/90 text-white px-8 py-3 rounded-lg transition-colors hover:cursor-pointer"
       >
-        Send Message
+        Enviar Mensaje
       </button>
       <Toaster
         toastOptions={{

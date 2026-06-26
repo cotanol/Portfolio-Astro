@@ -1,23 +1,41 @@
 export const projects = [
   {
-    title: "Shop Ecommerce",
-    description: "A modern e-commerce platform built with Next and Supabase",
-    image: "./projects/shop-ecommerce.webp",
-    technologies: ["Next", "TypeScript", "Supabase", "Tailwind CSS"],
-    link: "https://shop-supabase-next.vercel.app/",
+    title: "Demo Multitenant Saas con un Chatbot",
+    description:
+      "Un moderno SaaS multitenant, que integra un chatbot impulsado por IA para mejorar la experiencia del usuario al buscar un local para su niño.",
+    image: "./projects/demo-bashwish.jpg",
+    technologies: ["NextJS", "Prisma", "IA", "PostgreSQL"],
+    link: "https://bashwish-site-public.vercel.app/",
   },
   {
-    title: "Blog-Fake",
-    description: "A modern e-commerce platform built with Django and SQLite",
-    image: "./projects/blog-fake.webp",
-    technologies: ["Python", "Django", "SQLite"],
-    link: "https://cotanol.pythonanywhere.com/",
+    title: "Panel Administrativo Bashwish",
+    description:
+      "Un panel administrativo para gestionar el SaaS multitenant de Bashwish para el admin y para el vendedor",
+    image: "./projects/demo-bashwish-admin.jpg",
+    technologies: [
+      "NextJS",
+      "Redis",
+      "PostgreSQL",
+      "Prisma",
+      "NextAuth",
+      "Cloudinary",
+      "Resend",
+    ],
+    link: "https://bashwish-site-admin.vercel.app/",
   },
   {
-    title: "Ecommerce Bookstore",
-    description: "A modern e-commerce platform built with React",
-    image: "./projects/libreria.webp",
-    technologies: ["React", "TypeScript", "Firebase", "Tailwind CSS"],
-    link: "https://proyecto-libreria-react-firebase.vercel.app/",
+    title: "Sistema de Gestion de ingresos, gastos y planilla de trabajadores",
+    description:
+      "Un sistema completo para gestionar ingresos, gastos y planillas de trabajadores, con un enfoque en la eficiencia y la facilidad de uso.",
+    image: "./projects/planillas.jpg",
+    technologies: [
+      "React",
+      "Nestjs",
+      "PostgreSQL",
+      "Docker",
+      "VPS",
+      "Digital Ocean",
+    ],
+    link: "https://planillas.franciscosalcedo.engineer/",
   },
 ];

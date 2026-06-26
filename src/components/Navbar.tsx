@@ -2,11 +2,11 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const navItems = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Projects", href: "#projects" },
-  { name: "Skills", href: "#skills" },
-  { name: "Contact", href: "#contact" },
+  { name: "Inicio", href: "#home" },
+  { name: "Sobre Mí", href: "#about" },
+  { name: "Proyectos", href: "#projects" },
+  { name: "Habilidades", href: "#skills" },
+  { name: "Contacto", href: "#contact" },
 ];
 
 export default function Navbar() {
